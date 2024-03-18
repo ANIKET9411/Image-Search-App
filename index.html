@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search App</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .image {
+            width: 100%;
+            height: 75%;
+            /* object-fit: cover; */
+            overflow: hidden;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 88vw;
+            /* height:100vh; */
+            padding: 5vw;
+            display: none;
+        }
+
+        .item {
+            width: 30%;
+            height: 35vh;
+            object-fit: cover;
+            margin: 20px;
+            box-shadow: 0 0 20px 0 black;
+            border-radius: 15px;
+        }
+
+        img:hover {
+            transform: scale(1.3);
+            transition: all ease 1s;
+        }
+        button{
+            /* margin: 0 auto; */
+            margin:30px 30px 30px 10px;
+            padding:15px 15px;
+            border-radius: 10px;
+            background-color: rgb(89, 240, 89);
+            border: none;
+            font-weight: bold;
+        }
+        input{
+            width:25%;
+            height: 30px;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+        .btn{
+            margin:30px;
+            color: white;
+            display: none;
+            background-color: #008CBA;
+        }
+        .desc {
+            padding: 20px;
+            text-align: left;
+        }
+
+        img:hover .desc {
+            background-color: yellow;
+        }
+        h1,.inputs{
+            text-align: center;
+        }
+        button{
+        background-color: #42D6CA;
+    border: 5px solid #42D6CA;
+    transition: all .5s ease;
+    &:before
+    {
+      content: ' ';
+      border: 2px transparent solid;
+      /* position: absolute; */
+      left: 5px;
+      top: 5px;
+      box-sizing: border-box;
+      width: 110px;
+      height: 40px;
+      transition: all .7s ease;
+    }
+        }
+  button:hover{
+    background-color: rgba(#42D6CA, .7);
+    color: #fff;
+    border-radius: 20px;
+    &:before
+    {
+      border-radius: 20px;
+      border: 2px #42D6CA solid;
+    }
+  }
+  .but{
+    display: inline-block;
+  }
+    </style>
+</head>
+
+<body>
+    <h1>Image Search App</h1>
+    <div class="inputs">
+        <input type="text" placeholder="Search Anything..."><button>search</button>
+    </div>
+    <div class="container"></div>
+    <button class="btn">See more</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
